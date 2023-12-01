@@ -7,5 +7,5 @@
 ## functions: downsampling_estimate.m, Noisele.m, NoiseLevel.m
 
 # 2. Diffusion mmodel
-## run image_test.py for train
+## run image_test.py for train.
 ## if you need pretrained model, please contact me. 
