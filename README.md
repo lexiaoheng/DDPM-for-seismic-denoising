@@ -6,6 +6,6 @@
 ## main: cul_t.m %run this matlab function to culculate noise level of data
 ## functions: downsampling_estimate.m, Noisele.m, NoiseLevel.m
 
-# 2. Diffusion mmodel
+# 2. Diffusion model
 ## run image_test.py for train.
 ## if you need pretrained model, please contact me. 
