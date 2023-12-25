@@ -1,6 +1,6 @@
 # Publication
 ## （please cite it if you used this code in your paper）
-seismic strong noise attenuation based on diffusion model and principal component analysis（https://doi.org/10.48550/arXiv.2309.04944 ）
+seismic strong noise attenuation based on diffusion model and principal component analysis（https://doi.org/10.48550/arXiv.2309.04944 ）. Technically, you don't have to cite the arXiv preprint, but you have to cite the article after the official publication. 
 # Introduction
 This code is used for noise level assessment and noise cancellation. Since the use of diffusion models for noise processing requires a more accurate grasp of the noise level (to determine the number of diffusion reduction steps), we propose to use principal component analysis for assessment.
 
