@@ -8,6 +8,9 @@ This code is used for noise level assessment and noise cancellation. Since the u
 run cul_t.m function for estimation.
 # Diffusion model
 support data formation: xxx.mat with variation name "data" in it (you can use matlab to save it) , and you should name them with numbers, for example, "1.mat, 2.mat……".
+
 validation notes: use matlab generate a list to state t of validation data，which should be named as “t_seq.mat”.
+
 use main.py to training and validation your model, please read notes in main.py
+
 if you need pre-trained model, please contact me (junhengpeng@ieee.com)
