@@ -72,13 +72,19 @@ DDPM = Trainer(DDPM, model_save_path=saved_path)
 # 需要验证的待处理数据存放在./validation_dataset目录下，采用mat格式，待处理数据变量名为data。每一份数据按照正整数编号。
 # 请确保根目录下存在t_seq.mat文件，是一个一维数组，长度与验证数据的数目一致，每个元素与验证数据需要处理的步数t一一对应。（t请使用matlab函数进行估计）
 '''''
-Trainer = SimpleDiffusionTrainer(epoches=epoches,
+best_model_path = saved_path + '/' + 'BestModel.pth'
+if os.path.exists(best_model_path):
+    DDPM.load_state_dict(torch.load(best_model_path))
+
+    Trainer = SimpleDiffusionTrainer(epoches=epoches,
                                  mode='validation',
                                  train_loader=data_loader,
                                  optimizer=optimizer,
                                  device=device,
                                  timesteps=timesteps)
-DDPM = Trainer(DDPM, model_save_path=saved_path)
+    DDPM = Trainer(DDPM, model_save_path=saved_path)
+else:
+    print('Can`t find pretrained model.')
 '''''
 
 
