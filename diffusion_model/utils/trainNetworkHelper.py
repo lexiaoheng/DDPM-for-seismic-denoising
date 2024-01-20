@@ -174,14 +174,15 @@ class SimpleDiffusionTrainer(TrainerBase):
 
         elif self.mode == 'validation' :
             loop = tqdm(enumerate(self.train_loader), total=len(self.train_loader))
+            path1 = './t_seq.mat'
+            data1 = hdf.loadmat(path1)['t_seq'].squeeze()
             for step, features in loop:
                 features = features.to(self.device)
-
-                path1 = './t_seq.mat'
-                data1 = hdf.loadmat(path1)['t_seq'].squeeze()
-                out = model(mode="generate", x_start=features, t=int(data1[step]), loss_type="huber")
+                if len(self.train_loader)>1:
+                    out = model(mode="generate", x_start=features, t=int(data1[step]), loss_type="huber")
+                else:
+                    out = model(mode="generate", x_start=features, t=int(data1), loss_type="huber")
                 scio.savemat('./out/'+str(step+1)+'.mat', mdict={'data': out})
-
         else:
             print('Please input a mode between validation or train.')
 
