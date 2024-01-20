@@ -6,7 +6,7 @@
 %% set parameters
 clc;clear all;
 addpath('./data');
-addpath('./func');
+addpath('./matlab_functions');
 
 % noise parameters
 beta=0.00115:0.00015:0.031;
