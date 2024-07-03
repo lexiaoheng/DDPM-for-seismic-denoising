@@ -1,4 +1,4 @@
-# Publication
+# This repo is no long maintained, all codes are migrated to [new repo](https://github.com/lexiaoheng/Mariana)
 ## （please cite it if you used this code in your paper）
 seismic strong noise attenuation based on diffusion model and principal component analysis（10.1109/TGRS.2024.3355460）. Technically, you should to cite the article if you use this code in your work. 
 # Introduction
